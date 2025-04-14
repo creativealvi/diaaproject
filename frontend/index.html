@@ -3,19 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Voice Assistant</title>
+  <title>DIAA - Daffodil International Admission Assistant</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="card">
-    <img src="https://i.ibb.co/T0bBrP7/ai-agent.jpg" alt="AI Agent" />
-    <h2>Sarah, AI Support Agent</h2>
+    <img src="https://i.ibb.co/VqXK3Bp/virtual-assistant.png" alt="DIAA Agent" />
+    <h2>DIAA - Your Admission Assistant</h2>
     <p id="status">Listening...</p>
-    <div id="wave"></div>
-
+    <div class="visualizer">
+      <!-- Audio bars will be added dynamically -->
+    </div>
     <div class="controls">
-      <button id="muteBtn">🔇 Mute</button>
-      <button id="stopBtn">❌ End</button>
+      <button id="startBtn">
+        <div class="icon">▶️</div>
+        <span>Start</span>
+      </button>
+      <button id="muteBtn">
+        <div class="icon">⏹️</div>
+        <span>Stop Speech</span>
+      </button>
+      <button id="stopBtn">
+        <div class="icon">✕</div>
+        <span>End</span>
+      </button>
     </div>
   </div>
 
