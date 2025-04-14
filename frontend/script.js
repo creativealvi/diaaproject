@@ -20,7 +20,7 @@ document.getElementById("stopBtn").onclick = () => {
 };
 
 function sendToBot(text) {
-  fetch("https://your-backend-url.onrender.com/message", {
+  fetch("https://diaaproject.onrender.com/message", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: text })
