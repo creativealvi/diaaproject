@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: diaa
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: node backend/index.js
+    envVars:
+      - key: GOOGLE_PROJECT_ID
+        value:diu-dia
+      - key: GOOGLE_AGENT_ID
+        value:964c20a2-f988-4496-8797-80b688a68064
+      - key: GOOGLE_LOCATION
+        value: global  # Or the location you use
+    secrets:
+      - name: GOOGLE_CREDENTIALS
+        path: backend/service-account.json

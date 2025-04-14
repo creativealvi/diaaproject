@@ -11,9 +11,9 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-const projectId = 'your-project-id';
-const location = 'global'; // or 'us-central1'
-const agentId = 'your-agent-id';
+const projectId = process.env.GOOGLE_PROJECT_ID;  // Use environment variable
+const location = process.env.GOOGLE_LOCATION || 'global';  // default to global
+const agentId = process.env.GOOGLE_AGENT_ID;  // Use environment variable
 const languageCode = 'en';
 
 const sessionClient = new SessionsClient({
