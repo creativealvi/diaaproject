@@ -11,6 +11,10 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('DIAA backend is running 🚀');
+});
+
 const projectId = process.env.GOOGLE_PROJECT_ID;  // Use environment variable
 const location = process.env.GOOGLE_LOCATION || 'global';  // default to global
 const agentId = process.env.GOOGLE_AGENT_ID;  // Use environment variable
